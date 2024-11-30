@@ -14,7 +14,7 @@
         </thead>
         <tbody id="top5">
             <?php echo "<pre>"; print_r($allUsers); echo "</pre>";?>
-            {{-- @if (isset($allUsers) && !empty($allUsers))
+            @if (isset($allUsers) && !empty($allUsers))
             @foreach ($allUsers as $k=>$v)
             <tr>
                 <td>{{$k+1}}</td>
@@ -23,7 +23,7 @@
                 <td class="prize">${{$v[2]}}</td> 
             </tr>
             @endforeach
-            @endif --}}
+            @endif
         </tbody>
     </table>
     <div id="viewMoreContainer" class="button-container">
