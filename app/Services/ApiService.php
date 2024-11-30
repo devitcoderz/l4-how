@@ -18,10 +18,21 @@ class ApiService
             'accessKey' => 'wdDF9rcs17w9JPS6',
         ]);
 
-        // Check the response status or handle errors
         if ($response->successful()) {
-            // Successful response
-            dd($response->json());
+            $respo = $response->body();
+            if($respo['code'] == 0){
+                return [
+                    'success'=>true,
+                    'msg'=>null,
+                    'data'=>$respo['data']
+                ];
+            }else{
+                return [
+                    'success'=>false,
+                    'msg'=>$respo['msg'],
+                    'data'=>null
+                ];
+            }
         } else {
             // Handle failed response
             dd($response->status());
