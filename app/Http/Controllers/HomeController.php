@@ -29,8 +29,8 @@ class HomeController extends Controller
             }
         }
 
-        header('Content-Type: application/json');
-        $allUsers = json_encode($allUsers);
+        // header('Content-Type: application/json');
+        // $allUsers = json_encode($allUsers);
         return view("home.index",compact('allUsers','prizes'));
     }
 }
