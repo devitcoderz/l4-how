@@ -7,6 +7,6 @@
     </head>
     <body>
         @yield('content')
-        @include('home.includes.script')
+        @yield('scripts')
     </body>
 </html>

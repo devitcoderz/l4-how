@@ -13,7 +13,7 @@
             </tr>
         </thead>
         <tbody id="top5">
-            @if (isset($data) && !empty($data))
+            {{-- @if (isset($data) && !empty($data))
             @foreach ($data as $k=>$v)
             <tr>
                 <td>{{$v['sort']}}</td>
@@ -29,14 +29,14 @@
                 </td> 
             </tr>
             @endforeach
-            @endif
+            @endif --}}
         </tbody>
     </table>
     <div id="viewMoreContainer" class="button-container">
         <button onclick="showAllUsers()" class="signup-button">View More</button>
     </div>
     <div class="button-container">
-        <a href="https://bc.game/i-btx2bc-n/" target="_blank" class="signup-button">Sign up for BC.GAME!</a> 
+        <a href="https://bc.game/i-sncbc-n/" target="_blank" class="signup-button">Sign up for BC.GAME!</a> 
     </div>
     <div class="disclaimer">
         <h3>Rules for Leaderboard</h3>
@@ -45,4 +45,8 @@
         <p>MUST BE SIGNED UP UNDER BTx2</p>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+@include('home.includes.script')
 @endsection

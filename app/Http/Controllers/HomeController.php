@@ -16,12 +16,23 @@ class HomeController extends Controller
 
     public function index(){
         $prizes = [700,375,250,150,125,100,100,75,75,50];
-        $response = $this->ApiService->getData();
-        $data = [];
+
+        $allUsers = '';
+        $response = $this->ApiService->getData(); 
         if($response['success']){
-            $data = $response['data'];
+            foreach($response['data'] as $k=>$v){
+                $prize = 0 ;
+                if($k < 10){
+                    $prize = $prizes[$k];
+                } 
+                $allUsers .= '["'.$v['name'].'",'.$v['wager'].','.$prize.'],';
+            }
+
+            $allUsers = rtrim($allUsers,",");
         }
 
-        return view("home.index",compact('data','prizes'));
+        $allUsers = '['.$allUsers.']';
+
+        return view("home.index",compact('allUsers','prizes'));
     }
 }

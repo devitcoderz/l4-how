@@ -25,7 +25,9 @@ function startCountdown() {
 }
 
 function showAllUsers() {
-    const allUsers = [["Alexbtx2",44614.87,400],["Hulkboost",18755.53,250],["Durism",12373.42,200],["Vjpxaegxutac",7514.52,100],["NoorZone",7063.59,50],["xeni xeni",5082.11,""],["Rztvbexivtac",3172.18,""],["ROYCOENEN",3043.17,""],["Blastt325",2278.95,""],["Onmoney",1460.3,""],["btxvk",1390.28,""],["iamkct",1176.18,""],["Mcsnceiuvtac",1097.2,""],["Ria007",992.64,""],["Btxamul",707.71,""],["baigbtx",698.61,""],["dvgurevichBTX",530.23,""],["AyyryFake",516.34,""],["Nuurruuu",424.61,""],["Fathima1",323.77,""]];
+    const allUsers = "{{$data}}";
+    console.log(allUsers)
+    // const allUsers = [["Alexbtx2",44614.87,400],["Hulkboost",18755.53,250],["Durism",12373.42,200],["Vjpxaegxutac",7514.52,100],["NoorZone",7063.59,50],["xeni xeni",5082.11,""],["Rztvbexivtac",3172.18,""],["ROYCOENEN",3043.17,""],["Blastt325",2278.95,""],["Onmoney",1460.3,""],["btxvk",1390.28,""],["iamkct",1176.18,""],["Mcsnceiuvtac",1097.2,""],["Ria007",992.64,""],["Btxamul",707.71,""],["baigbtx",698.61,""],["dvgurevichBTX",530.23,""],["AyyryFake",516.34,""],["Nuurruuu",424.61,""],["Fathima1",323.77,""]];
     const tableBody = document.getElementById('top5');
 
 
