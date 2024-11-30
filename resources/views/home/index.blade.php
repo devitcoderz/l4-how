@@ -13,23 +13,16 @@
             </tr>
         </thead>
         <tbody id="top5">
-            {{-- @if (isset($data) && !empty($data))
-            @foreach ($data as $k=>$v)
+            @if (isset($allUsers) && !empty($allUsers))
+            @foreach ($allUsers as $k=>$v)
             <tr>
-                <td>{{$v['sort']}}</td>
-                <td>{{$v['name']}}</td> 
-                <td>${{$v['wager']}}</td> 
-                <td class="prize">
-                    @if($k < 10)
-                    ${{$prizes[$k]}}
-                    @else
-                    $0
-                    @endif 
-                     
-                </td> 
+                <td>{{$k+1}}</td>
+                <td>{{$v[0]}}</td> 
+                <td>${{$v[1]}}</td> 
+                <td class="prize">${{$v[2]}}</td> 
             </tr>
             @endforeach
-            @endif --}}
+            @endif
         </tbody>
     </table>
     <div id="viewMoreContainer" class="button-container">
