@@ -13,15 +13,16 @@
             </tr>
         </thead>
         <tbody id="top5">
-            <?php echo "<pre>"; print_r($allUsers); echo "</pre>";?>
             @if (isset($allUsers) && !empty($allUsers))
             @foreach ($allUsers as $k=>$v)
+            @if ($k < 5)
             <tr>
                 <td>{{$k+1}}</td>
                 <td>{{$v[0]}}</td> 
                 <td>${{$v[1]}}</td> 
                 <td class="prize">${{$v[2]}}</td> 
             </tr>
+            @endif
             @endforeach
             @endif
         </tbody>
