@@ -16,6 +16,7 @@ class HomeController extends Controller
 
     public function index(){
         $data['users'] = $this->ApiService->getData();
+        dd($data);
         return view("home.index");
     }
 }

@@ -19,8 +19,7 @@ class ApiService
         ]);
 
         if ($response->successful()) {
-            $respo = $response->body();
-            dd($respo);
+            $respo = $response->json();
             if($respo['code'] == 0){
                 return [
                     'success'=>true,
