@@ -12,7 +12,6 @@ class ApiService
             'Origin' => 'http://bc.game/',
             'Content-Type' => 'application/json',
         ])
-        ->withoutVerifying() // Disable SSL verification
         ->timeout(30) // Set a reasonable timeout in case of issues
         ->post('http://bc.game/api/agent/open-api/kol/invitees/', [
             'invitationCode' => 'sncbc',

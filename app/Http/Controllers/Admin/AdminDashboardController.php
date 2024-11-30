@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use App\Services\OpenAiService;
+use App\Services\ApiService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
@@ -15,7 +15,7 @@ class AdminDashboardController extends Controller
 {
     protected $openAiService;
 
-    public function __construct(OpenAiService $openAiService)
+    public function __construct(ApiService $openAiService)
     {
         $this->openAiService = $openAiService;
     }

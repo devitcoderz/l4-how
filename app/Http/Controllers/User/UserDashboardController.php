@@ -4,7 +4,6 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use App\Services\OpenAiService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
@@ -13,29 +12,23 @@ use Illuminate\Support\Facades\Session;
 
 class UserDashboardController extends Controller
 {
-    protected $openAiService;
-
-    public function __construct(OpenAiService $openAiService)
-    {
-        $this->openAiService = $openAiService;
-    }
-
     public function index()
     {
-        $user = Auth::user();
-        $userModel = User::find($user->id);
-        $userPatients = User::where('id', $user->id)->with('patients')->first()->patients;
-        $userPrompts = $userModel->prompts;
+        dd("not yet developed");
+        // $user = Auth::user();
+        // $userModel = User::find($user->id);
+        // $userPatients = User::where('id', $user->id)->with('patients')->first()->patients;
+        // $userPrompts = $userModel->prompts;
 
-        $documents = collect();
-        $finalText = '';
+        // $documents = collect();
+        // $finalText = '';
 
-        if (Session::has('patientS'))
-        {
-            Session::forget('patientS');
-        }
+        // if (Session::has('patientS'))
+        // {
+        //     Session::forget('patientS');
+        // }
 
-        return view('user.dashboard', compact('finalText', 'userPatients', 'userPrompts', 'documents'));
+        // return view('user.dashboard', compact('finalText', 'userPatients', 'userPrompts', 'documents'));
     }
 
     public function change_password()
