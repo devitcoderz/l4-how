@@ -18,6 +18,8 @@ class ApiService
             'accessKey' => 'wdDF9rcs17w9JPS6',
         ]);
 
+        dd($response);
+
         // Check the response status or handle errors
         if ($response->successful()) {
             // Successful response
