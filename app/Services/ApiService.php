@@ -35,7 +35,7 @@ class ApiService
             }
         } else {
             // Handle failed response
-            dd($response->status());
+            dd("API ERROR: ".$response->status());
         }
 
     }

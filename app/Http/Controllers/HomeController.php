@@ -15,8 +15,13 @@ class HomeController extends Controller
     }
 
     public function index(){
-        $data['users'] = $this->ApiService->getData();
-        dd($data);
-        return view("home.index");
+        $prizes = [700,375,250,150,125,100,100,75,75,50];
+        $response = $this->ApiService->getData();
+        $data = [];
+        if($response['success']){
+            $data = $response['data'];
+        }
+
+        return view("home.index",compact('data','prizes'));
     }
 }
