@@ -15,20 +15,6 @@ class UserDashboardController extends Controller
     public function index()
     {
         dd("not yet developed");
-        // $user = Auth::user();
-        // $userModel = User::find($user->id);
-        // $userPatients = User::where('id', $user->id)->with('patients')->first()->patients;
-        // $userPrompts = $userModel->prompts;
-
-        // $documents = collect();
-        // $finalText = '';
-
-        // if (Session::has('patientS'))
-        // {
-        //     Session::forget('patientS');
-        // }
-
-        // return view('user.dashboard', compact('finalText', 'userPatients', 'userPrompts', 'documents'));
     }
 
     public function change_password()

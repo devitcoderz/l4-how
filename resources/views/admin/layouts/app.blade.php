@@ -15,7 +15,7 @@
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
-	<title>medopai</title>
+	<title>Admin</title>
 	<link href="{{asset('backoffice/css/app.css')}}" rel="stylesheet">
 	<link href="{{asset('backoffice/css/loader.css')}}" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">

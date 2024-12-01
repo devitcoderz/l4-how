@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Setting;
 use App\Services\ApiService;
+use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
@@ -29,8 +31,14 @@ class HomeController extends Controller
             }
         }
 
-        // header('Content-Type: application/json');
-        // $allUsers = json_encode($allUsers);
-        return view("home.index",compact('allUsers','prizes'));
+        // //for testing without api records
+        // for($i = 1 ; $i <= 10 ; $i++){
+        //     $allUsers[] = ["Testing",92000,700];
+        // }
+
+        $settings = Setting::first();
+        $bannerImg = !empty($settings->banner_img) && Storage::disk('public')->exists('images/' . $settings->banner_img) ? Storage::url('images/' . $settings->banner_img) :  asset('images/btx2-leaderboard.png');
+        $backgroundImg = !empty($settings->background_img) && Storage::disk('public')->exists('images/' . $settings->background_img) ? Storage::url('images/' . $settings->background_img) : asset('images/btx2-background.png');
+        return view("home.index",compact('allUsers','prizes','settings','bannerImg','backgroundImg'));
     }
 }

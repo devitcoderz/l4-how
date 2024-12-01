@@ -21,19 +21,10 @@ Route::group(['middleware' => 'guest'], function () {
 
 Route::middleware(['auth','auth.admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/',[AdminDashboardController::class,'index'])->name("dashboard");
-    Route::get('/patient/{patient}/documents', [AdminDashboardController::class, 'selectedPatientDocuments'])->name('dashboard.docs');
-    Route::post('/patient/{patient}/documents/upload', [AdminDashboardController::class, 'uploadDocument'])->name('dashboard.docs.upload');
-    Route::post('/patient/documents/upload/ajax', [AdminDashboardController::class, 'uploadDocumentAjax'])->name('dashboard.docs.upload.ajax');
-    Route::delete('/patient/{patient}/document/{document}/delete', [AdminDashboardController::class, 'deleteDocument'])->name('dashboard.docs.delete');
+    Route::get("/settings",[AdminDashboardController::class,'settings'])->name('settings');
+    Route::post("/settings",[AdminDashboardController::class,'save_settings'])->name('save-settings');
     
-    // User Management Routes
-    Route::get('/users', [UserController::class, 'index'])->name('users');
-    Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
-    Route::post('/users/create', [UserController::class, 'store'])->name('users.create');
-    Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('users.edit');
-    Route::put('/users/{user}', [UserController::class, 'update'])->name('users.update');
-    Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.delete');
-   
+  
     Route::get('/change-password',[AdminDashboardController::class,'change_password'])->name('change-password');
     Route::post('/change-password',[AdminDashboardController::class,'change_password_submit'])->name('change-password.submit');
 });
