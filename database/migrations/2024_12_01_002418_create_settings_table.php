@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string("instagram_link")->nullable();
             $table->string("discord_link")->nullable();
             $table->string("youtube_link")->nullable();
+            $table->string("kick_link")->nullable();
 
             $table->string("bcgame_link")->nullable();
 

@@ -41,7 +41,7 @@
         <h3>Rules for Leaderboard</h3>
         <p>Safe wagering (for example) 1.01x bets on dice, Plinko or any other abusive behavior will result in the exclusion from the leaderboard and lead to further investigation through BC.GAME!</p>
         <p>Original games and sportsbook bets count as 25% into total wager!</p>
-        <p>MUST BE SIGNED UP UNDER SNCBC</p>
+        <p>MUST BE SIGNED UP UNDER {{$settings->code}}</p>
     </div>
     <div class="socials">
         <a href="{{$settings->instagram_link}}" target="_blank">
@@ -52,6 +52,9 @@
         </a>
         <a href="{{$settings->youtube_link}}" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" />
+        </a>
+        <a href="{{$settings->kick_link}}" target="_blank">
+            <img src="https://cdn3.emoji.gg/emojis/3600-kick.png" alt="Kick" />
         </a>
     </div>
 </div>

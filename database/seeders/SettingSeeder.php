@@ -21,6 +21,7 @@ class SettingSeeder extends Seeder
             "code" => 'SNCBC',
             "instagram_link" => 'https://www.instagram.com/slotsnchill/profilecard/?igsh=MTE1dWpmZTVuMG0zeA==Kick.com/slotsnchill',
             "discord_link" => 'https://discord.com/invite/9hWuUDQXjJ',
+            "kick_link" => 'https://kick.com/slotsnchill',
             "youtube_link" => 'https://youtube.com/@slotsnchill?si=wJkprzg2SWsAWMj0',
             "bcgame_link" => 'https://bc.game/i-sncbc-n/',
             "shadow_color" => '#32cd32',
