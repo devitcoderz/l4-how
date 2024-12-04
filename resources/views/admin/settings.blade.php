@@ -41,7 +41,7 @@
                                     </div>
                                 @elseif(empty($settings->background_img))
                                     <div class="mb-2">
-                                        <img src="{{ asset('images/bg.png') }}" alt="Background Image" class="img-thumbnail" style="max-width: 200px;">
+                                        <img src="{{ asset('images/bg-2.png') }}" alt="Background Image" class="img-thumbnail" style="max-width: 200px;">
                                     </div>
                                 @endif
                                 <input type="file" class="form-control @error('background_img') is-invalid @enderror" id="background_img" name="background_img">
