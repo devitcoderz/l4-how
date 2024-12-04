@@ -38,7 +38,7 @@ class HomeController extends Controller
 
         $settings = Setting::first();
         $bannerImg = !empty($settings->banner_img) && Storage::disk('public')->exists('images/' . $settings->banner_img) ? Storage::url('images/' . $settings->banner_img) :  asset('images/heading.gif');
-        $backgroundImg = !empty($settings->background_img) && Storage::disk('public')->exists('images/' . $settings->background_img) ? Storage::url('images/' . $settings->background_img) : asset('images/bg-2.png');
+        $backgroundImg = !empty($settings->background_img) && Storage::disk('public')->exists('images/' . $settings->background_img) ? Storage::url('images/' . $settings->background_img) : asset('images/bg-3.png');
         return view("home.index",compact('allUsers','prizes','settings','bannerImg','backgroundImg'));
     }
 }
