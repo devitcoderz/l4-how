@@ -23,7 +23,7 @@
                                     </div>
                                 @elseif(empty($settings->banner_img))
                                     <div class="mb-2">
-                                        <img src="{{ asset('images/btx2-leaderboard.png') }}" alt="Banner Image" class="img-thumbnail" style="max-width: 200px;">
+                                        <img src="{{ asset('images/heading.gif') }}" alt="Banner Image" class="img-thumbnail" style="max-width: 200px;">
                                     </div>
                                 @endif
                                 <input type="file" class="form-control @error('banner_img') is-invalid @enderror" id="banner_img" name="banner_img">
