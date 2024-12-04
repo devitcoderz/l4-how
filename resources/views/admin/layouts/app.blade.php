@@ -14,7 +14,7 @@
 	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
-
+	<link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
 	<title>Admin</title>
 	<link href="{{asset('backoffice/css/app.css')}}" rel="stylesheet">
 	<link href="{{asset('backoffice/css/loader.css')}}" rel="stylesheet">
